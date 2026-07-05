@@ -1,7 +1,11 @@
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./sections/Hero/Hero";
+
 function App() {
   return (
     <>
-      <h1>PAUL OS</h1>
+      <Navbar />
+      <Hero />
     </>
   );
 }
