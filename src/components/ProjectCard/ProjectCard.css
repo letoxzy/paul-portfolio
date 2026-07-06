@@ -1,0 +1,230 @@
+/* ==========================
+   PROJECT CARD
+========================== */
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(12px);
+
+  border-radius: 24px;
+
+  transition: all 0.35s ease;
+
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary);
+  box-shadow: 0 25px 60px rgba(59, 130, 246, 0.2);
+}
+
+/* ==========================
+   IMAGE
+========================== */
+
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.08);
+}
+
+/* ==========================
+   FEATURED BADGE
+========================== */
+
+.featured-badge {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  padding: 8px 16px;
+
+  border-radius: 50px;
+
+  background: var(--primary);
+
+  color: #fff;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ==========================
+   CONTENT
+========================== */
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  padding: 30px;
+}
+
+.project-category {
+  color: var(--primary);
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  font-size: 0.8rem;
+
+  font-weight: 600;
+
+  margin-bottom: 12px;
+}
+
+.project-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.project-content p {
+  color: var(--text-secondary);
+
+  line-height: 1.8;
+
+  margin-bottom: 25px;
+}
+
+/* ==========================
+   TECH STACK
+========================== */
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-bottom: 30px;
+}
+
+.project-tech span {
+  padding: 8px 16px;
+
+  border-radius: 50px;
+
+  background: rgba(59, 130, 246, 0.12);
+
+  color: var(--primary);
+
+  font-size: 0.82rem;
+
+  transition: 0.3s ease;
+}
+
+.project-tech span:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.project-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.project-buttons a,
+.demo-btn {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: all 0.35s ease;
+}
+
+.project-buttons a:hover,
+.demo-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+/* ==========================
+   FEATURED PROJECT
+========================== */
+
+.project-card.featured {
+  grid-column: span 2;
+}
+
+.project-card.featured .project-image {
+  height: 340px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 992px) {
+  .project-card.featured {
+    grid-column: span 1;
+  }
+
+  .project-card.featured .project-image {
+    height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-content {
+    padding: 22px;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+
+  .project-content h3 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,35 @@
+.experience {
+  padding: 120px 0;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 60px;
+}
+
+.timeline::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+  bottom: 0;
+
+  width: 3px;
+
+  background: rgba(255,255,255,.1);
+
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 90px 0;
+  }
+
+  .timeline::before {
+    left: 8px;
+    transform: none;
+  }
+}

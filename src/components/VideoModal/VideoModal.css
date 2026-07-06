@@ -1,0 +1,199 @@
+/* ===========================
+   OVERLAY
+=========================== */
+
+.video-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  overflow-y: auto;
+
+  z-index: 9999;
+
+  animation: fadeIn .35s ease;
+}
+
+/* ===========================
+   MODAL
+=========================== */
+
+.video-modal {
+  position: relative;
+
+  width: 100%;
+  max-width: 850px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: rgba(18, 18, 18, 0.95);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  border-radius: 25px;
+
+  padding: 30px;
+
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0 30px 80px rgba(0,0,0,.45);
+
+  animation: modalIn .35s ease;
+}
+
+/* ===========================
+   CLOSE BUTTON
+=========================== */
+
+.close-btn{
+    position:absolute;
+
+    top:20px;
+    right:20px;
+
+    width:45px;
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:1rem;
+}
+
+.close-btn:hover{
+
+    background:#ef4444;
+
+    transform:rotate(90deg);
+
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.video-modal h2{
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+
+}
+
+.video-modal p{
+
+    color:var(--text-secondary);
+
+    margin-bottom:30px;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+   VIDEO
+=========================== */
+
+.demo-video {
+  width: 100%;
+  max-width: 800px;
+  max-height: 450px;
+
+  display: block;
+  margin: 0 auto;
+
+  border-radius: 16px;
+  background: #000;
+
+  object-fit: contain;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+@keyframes modalIn{
+
+from{
+
+opacity:0;
+
+transform:scale(.9);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.video-modal{
+
+padding:20px;
+
+}
+
+.video-modal h2{
+
+font-size:1.5rem;
+
+}
+
+.close-btn{
+
+width:40px;
+height:40px;
+
+}
+
+}

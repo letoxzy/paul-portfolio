@@ -1,0 +1,247 @@
+/* ==========================
+   HERO
+========================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 120px;
+  background: var(--bg-primary);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(59,130,246,.18), transparent 35%),
+    radial-gradient(circle at 80% 70%, rgba(6,182,212,.12), transparent 35%);
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 80px;
+}
+
+/* ==========================
+   LEFT CONTENT
+========================== */
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-tag {
+  display: inline-block;
+  color: var(--primary-light);
+  font-size: .95rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.hero-content h3 {
+  color: var(--primary-light);
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  max-width: 600px;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 16px 30px;
+
+  border-radius: 999px;
+
+  font-weight: 600;
+
+  transition: .35s;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: #fff;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(59,130,246,.35);
+}
+
+.secondary-btn {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.secondary-btn:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,.08);
+}
+
+/* ==========================
+   TECH STACK
+========================== */
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tech-stack span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border-radius: 50px;
+
+  background: rgba(255,255,255,.05);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  transition: .35s;
+}
+
+.tech-stack span:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+/* ==========================
+   IMAGE
+========================== */
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 420px;
+  height: 420px;
+}
+
+.image-glow {
+  position: absolute;
+  inset: 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59,130,246,.45), transparent 70%);
+  filter: blur(50px);
+}
+
+.image-wrapper img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 6px solid rgba(255,255,255,.08);
+
+  box-shadow: 0 25px 60px rgba(0,0,0,.45);
+
+  animation: floatImage 5s ease-in-out infinite;
+}
+
+/* ==========================
+   FLOAT ANIMATION
+========================== */
+
+@keyframes floatImage {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 992px) {
+
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .hero-content p {
+    margin-inline: auto;
+  }
+
+  .hero-buttons,
+  .tech-stack {
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding-top: 100px;
+  }
+
+  .image-wrapper {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content h3 {
+    font-size: 1.3rem;
+  }
+
+}

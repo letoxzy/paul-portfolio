@@ -1,0 +1,60 @@
+.projects {
+  padding: 120px 0;
+}
+
+.projects-intro {
+  max-width: 700px;
+  margin: 0 auto 70px;
+  text-align: center;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ==========================
+   PROJECTS GRID
+========================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 35px;
+  align-items: stretch;
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: minmax(320px, 450px);
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 90px 0;
+  }
+
+  .projects-intro {
+    margin-bottom: 45px;
+    padding: 0 15px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 25px;
+  }
+
+  .projects-grid > * {
+    width: 100%;
+    max-width: 400px;
+  }
+}
