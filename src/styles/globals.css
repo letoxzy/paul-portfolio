@@ -36,7 +36,11 @@ img {
     display: block;
 }
 
-section {
+/* ==========================
+   PORTFOLIO SECTIONS
+========================== */
+
+.page-section {
     width: 100%;
     padding: 120px 8%;
 }
@@ -52,13 +56,13 @@ section {
 ========================== */
 
 @media (max-width: 992px) {
-    section {
+    .page-section {
         padding: 100px 5%;
     }
 }
 
 @media (max-width: 768px) {
-    section {
+    .page-section {
         padding: 80px 20px;
     }
 

@@ -6,7 +6,7 @@ import "./Skills.css";
 
 function Skills() {
   return (
-    <section id="skills" className="skills">
+    <section id="skills" className="skills page-section">
       <div className="container">
         <SectionTitle title="My Skills" subtitle="Technologies I Work With" />
 

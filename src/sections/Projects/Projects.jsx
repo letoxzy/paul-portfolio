@@ -12,7 +12,7 @@ function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section id="projects" className="projects">
+    <section id="projects" className="projects page-section">
       <div className="container">
         <SectionTitle title="Featured Projects" subtitle="My Recent Work" />
 

@@ -37,26 +37,38 @@
 
   border-radius: 18px;
 
-  transition: .3s;
+  text-decoration: none;
+  color: inherit;
+
+  transition: all 0.3s ease;
+
+  cursor: pointer;
 }
 
 .contact-card:hover {
   border-color: var(--primary);
   transform: translateY(-5px);
+  background: rgba(59, 130, 246, 0.08);
 }
 
 .contact-card svg {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   color: var(--primary);
+  flex-shrink: 0;
 }
 
 .contact-card h4 {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  color: var(--text-primary);
 }
 
-.contact-card a,
 .contact-card span {
   color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.contact-card:hover span {
+  color: var(--text-primary);
 }
 
 /* Form */

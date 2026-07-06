@@ -14,11 +14,11 @@ const profile = {
   resume,
 
   social: {
-    github: "https://github.com/letoxzy",
-    linkedin: "www.linkedin.com/in/opokiti-paul-7404423a2",
-    email: "opokitipaul@gmail.com",
-    whatsapp: "https://wa.me/2348162061664",
-  },
+  github: "https://github.com/letoxzy",
+  linkedin: "https://www.linkedin.com/in/opokiti-paul-7404423a2",
+  email: "mailto:opokitipaul@gmail.com",
+  whatsapp: "https://wa.me/2348162061664",
+},
 
   technologies: [
     "React",

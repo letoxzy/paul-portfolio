@@ -8,7 +8,7 @@ import resume from "../../assets/cv/OPOKITI_PAUL_KEHINDE_ATS_CV.pdf";
 
 function Hero() {
   return (
-    <section id="home" className="hero">
+    <section id="home" className="hero page-section">
       <div className="hero-bg"></div>
 
       <div className="container hero-container">

@@ -6,7 +6,7 @@ import "./Services.css";
 
 function Services() {
   return (
-    <section id="services" className="services">
+    <section id="services" className="services page-section">
       <div className="container">
         <SectionTitle title="What I Do" subtitle="Services" />
 

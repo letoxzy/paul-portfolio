@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import resume from "../../assets/cv/OPOKITI_PAUL_KEHINDE_ATS_CV.pdf";
 import "./Footer.css";
+import profile from "../../data/profile";
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -38,19 +39,34 @@ function Footer() {
           </div>
 
           <div className="footer-socials">
-            <a href="#">
+            <a
+              href={profile.social.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
               <FaGithub />
             </a>
 
-            <a href="#">
+            <a
+              href={profile.social.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
               <FaLinkedin />
             </a>
 
-            <a href="#">
+            <a
+              href={profile.social.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp"
+            >
               <FaWhatsapp />
             </a>
 
-            <a href="#">
+            <a href={profile.social.email} aria-label="Email">
               <FaEnvelope />
             </a>
           </div>
