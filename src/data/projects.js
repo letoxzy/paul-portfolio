@@ -23,7 +23,7 @@ const projects = [
 
     secondaryButton: {
       text: "GitHub",
-      link: "#",
+      link: "https://github.com/letoxzy/GSMWorld",
     },
 
     featured: true,
