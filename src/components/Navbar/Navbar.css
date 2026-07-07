@@ -7,23 +7,26 @@
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
   z-index: 1000;
   transition: all 0.35s ease;
   padding: 20px 0;
 }
 
 .navbar.scrolled {
-  background: rgba(8, 12, 28, 0.8);
+  background: rgba(8, 12, 28, 0.85);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(255,255,255,.08);
-  box-shadow: 0 10px 35px rgba(0,0,0,.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
 }
 
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 /* ==========================
@@ -33,7 +36,7 @@
 .logo {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #ffffff;
+  color: #fff;
   letter-spacing: 1px;
   text-decoration: none;
   flex-shrink: 0;
@@ -50,17 +53,16 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 32px;
 }
 
 .nav a {
-  color: rgba(255,255,255,.75);
+  color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
   font-weight: 500;
   position: relative;
-  transition: .3s;
+  transition: 0.3s;
   padding: 10px 0;
-  display: inline-block;
   white-space: nowrap;
 }
 
@@ -76,7 +78,7 @@
   width: 0;
   height: 2px;
   background: var(--primary);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .nav a:hover::after,
@@ -93,22 +95,32 @@
 ========================== */
 
 .hire-btn {
-  padding: 14px 36px;
-  background: var(--primary);
-  color: white !important;
-  border-radius: 50px;
-  transition: .35s;
-  text-decoration: none;
-  white-space: nowrap;
-  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  padding: 12px 26px;
+
+  min-width: 130px;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-light)
+  );
+
+  color: #fff !important;
+
+  border-radius: 999px;
+
+  font-size: 0.95rem;
   font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: 0.3px;
-  line-height: 1;
-  box-shadow: 0 4px 14px rgba(59,130,246,.35);
+
+  white-space: nowrap;
+
+  transition: all 0.35s ease;
+
+  box-shadow: 0 8px 22px rgba(59, 130, 246, 0.35);
 }
 
 .hire-btn::after {
@@ -117,7 +129,7 @@
 
 .hire-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(59,130,246,.4);
+  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.45);
 }
 
 /* ==========================
@@ -128,9 +140,10 @@
   display: none;
   background: transparent;
   border: none;
-  color: white;
+  color: #fff;
   font-size: 2rem;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 /* ==========================
@@ -148,10 +161,10 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: min(280px, 80vw);
     height: 100vh;
 
-    background: rgba(10,15,30,.98);
+    background: rgba(10, 15, 30, 0.98);
     backdrop-filter: blur(20px);
 
     display: flex;
@@ -159,9 +172,9 @@
     justify-content: center;
     align-items: center;
 
-    gap: 35px;
+    gap: 30px;
 
-    transition: .35s;
+    transition: right 0.35s ease;
   }
 
   .nav.active {
@@ -169,6 +182,7 @@
   }
 
   .hire-btn {
-    margin-top: 15px;
+    width: 180px;
+    margin-top: 10px;
   }
 }
