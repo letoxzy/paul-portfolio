@@ -62,17 +62,17 @@ function About() {
             <div className="stats">
               <div className="stat-card">
                 <h2>4+</h2>
-                <span>Projects</span>
+                <span>Projects Completed</span>
               </div>
 
               <div className="stat-card">
                 <h2>10+</h2>
-                <span>Technologies</span>
+                <span>Technologies Used</span>
               </div>
 
               <div className="stat-card">
                 <h2>2+</h2>
-                <span>Years Learning</span>
+                <span>Years of Experience</span>
               </div>
 
               <div className="stat-card">
