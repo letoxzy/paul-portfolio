@@ -97,8 +97,7 @@
   border-radius: 50px;
   transition: .35s;
   text-decoration: none;
-  white-space: nowrap;     /* stops text from ever compressing */
-  flex-shrink: 0;           /* stops flexbox from squeezing this button */
+  white-space: nowrap;     
   display: inline-flex;
   align-items: center;
   justify-content: center;
