@@ -91,12 +91,20 @@
 ========================== */
 
 .hire-btn {
-  padding: 12px 22px;
+  padding: 12px 26px;
   background: var(--primary);
   color: white !important;
   border-radius: 50px;
   transition: .35s;
   text-decoration: none;
+  white-space: nowrap;     /* stops text from ever compressing */
+  flex-shrink: 0;           /* stops flexbox from squeezing this button */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  line-height: 1;
 }
 
 .hire-btn::after {
