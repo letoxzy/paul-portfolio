@@ -50,14 +50,17 @@ function ProjectCard({ project, onWatchDemo }) {
             </a>
           )}
 
-          <a
-            href={project.secondaryButton.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGithub />
-            {project.secondaryButton.text}
-          </a>
+          {/* Only show second button if it exists */}
+          {project.secondaryButton && (
+            <a
+              href={project.secondaryButton.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub />
+              {project.secondaryButton.text}
+            </a>
+          )}
         </div>
       </div>
     </motion.div>
