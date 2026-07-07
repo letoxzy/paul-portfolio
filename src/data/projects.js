@@ -52,7 +52,7 @@ const projects = [
 
     secondaryButton: {
       text: "GitHub",
-      link: "#",
+      link: "https://github.com/letoxzy/lumiflix.git",
     },
 
     featured: false,
@@ -80,7 +80,7 @@ const projects = [
 
     secondaryButton: {
       text: "GitHub",
-      link: "#",
+      link: "https://github.com/letoxzy/BankApp",
     },
 
     featured: false,
