@@ -104,7 +104,7 @@ const projects = [
 
     primaryButton: {
       text: "View Design",
-      link: "#",
+      link: "https://www.figma.com/design/MyjBScMkU6ZM3QOe61hhSJ/Untitled?node-id=0-1&t=l6quGAu7viQ8TA1H-1",
     },
 
     secondaryButton: {
