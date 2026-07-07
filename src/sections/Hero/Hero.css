@@ -30,6 +30,8 @@
   justify-content: space-between;
 
   gap: 80px;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* ==========================
@@ -155,8 +157,9 @@
 
 .image-wrapper {
   position: relative;
-  width: 420px;
-  height: 420px;
+  width: min(420px, 100%);
+  max-width: 420px;
+  aspect-ratio: 1;
 }
 
 .image-glow {

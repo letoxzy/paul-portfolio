@@ -58,7 +58,7 @@
   font-weight: 500;
   position: relative;
   transition: .3s;
-  padding: 10px 0;      /* adds ~38px of extra tap height */
+  padding: 10px 0;      
   display: inline-block;
 }
 
