@@ -93,7 +93,7 @@
 ========================== */
 
 .hire-btn {
-  padding: 12px 26px;
+  padding: 14px 36px;
   background: var(--primary);
   color: white !important;
   border-radius: 50px;
@@ -105,8 +105,10 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
+  font-size: 1rem;
   letter-spacing: 0.3px;
   line-height: 1;
+  box-shadow: 0 4px 14px rgba(59,130,246,.35);
 }
 
 .hire-btn::after {
